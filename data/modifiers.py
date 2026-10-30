@@ -1,0 +1,1 @@
+#fazer um dicionario com os modificadores que ja tenho escrito no keep bonitinho
