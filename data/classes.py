@@ -1,12 +1,24 @@
 CLASSES = {
     'Guerreiro': {
-        'constituicao': 14,
-        'destreza': 13,
-        'forca': 15,
-        'inteligencia': 10,
-        'sabedoria': 12,
-        'carisma': 8
+
+        'atributos': {
+            'constituicao': 14,
+            'destreza': 13,
+            'forca': 15,
+            'inteligencia': 10,
+            'sabedoria': 12,
+            'carisma': 8,
+        },
+        'inventario': {
+            'espada_longa': 1,
+            'arco_curto': 1,
+            'cota_malha': 1,
+            'escudo': 1,
+            'pocao_pequena': 3,
+            },
     },
+
+    #CONTINUAR INVENTARIO NOS OUTRAS CLASSES!!!!!!!
 
     'Mago': {
         'constituicao': 13,
