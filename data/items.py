@@ -1,3 +1,10 @@
+"""
+Criado uma variavel contendo todos os dicionarios
+para podermos filtrar mais facilmente os TIPOS DE ITENS,
+armas, armaduras, pocoes etc. Mas mantendo os dicionarios
+originais para organização e criação de mais itens no futuro.
+"""
+
 ARMAS = {
     'espada_curta': {
         'nome': 'Espada Curta',
@@ -62,6 +69,22 @@ ARMAS = {
         'tipo': 'armas',
     },
 
+    'rapieira': {
+        'nome': 'Rapieira',
+        'qtd_dados': 1,
+        'qtd_lados': 8,
+        'atributo': 'destreza',
+        'alcance': 'corpo_a_corpo',
+        'tipo': 'armas',
+    },
+     'cimitarra': {
+        'nome': 'Cimitarra',
+        'qtd_dados': 1,
+        'qtd_lados': 6,
+        'atributo': 'destreza',
+        'alcance': 'corpo_a_corpo',
+        'tipo': 'armas',
+    },
 }
 
 ARMADURAS = {
@@ -116,9 +139,3 @@ POCOES = {
 }
 
 ITENS = ARMAS | ARMADURAS | ESCUDOS | POCOES
-"""
-Criado uma variavel contendo todos os dicionarios
-para podermos filtrar mais facilmente os TIPOS DE ITENS,
-armas, armaduras, pocoes etc. Mas mantendo os dicionarios
-originais para organização e criação de mais itens no futuro.
-"""
