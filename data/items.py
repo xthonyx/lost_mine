@@ -77,13 +77,24 @@ ARMAS = {
         'alcance': 'corpo_a_corpo',
         'tipo': 'armas',
     },
-     'cimitarra': {
+
+    'cimitarra': {
         'nome': 'Cimitarra',
         'qtd_dados': 1,
         'qtd_lados': 6,
         'atributo': 'destreza',
         'alcance': 'corpo_a_corpo',
         'tipo': 'armas',
+    },
+
+    'mordida': {
+        'nome': 'Mordida',
+        'qtd_dados': 2,
+        'qtd_lados': 4,
+        'atributo': 'forca',
+        'alcance': 'corpo_a_corpo',
+        'tipo': 'armas',
+
     },
 }
 
@@ -94,9 +105,27 @@ ARMADURAS = {
         'tipo': 'armaduras',
     },
 
+    'coro_batido': {
+        'nome': 'Armadura de Couro Batido',
+        'ca_base': 12,
+        'tipo': 'armaduras',
+    },
+
     'camisao_malha': {
         'nome': 'Camisão de Malha',
         'ca_base': 13,
+        'tipo': 'armaduras',
+    },
+
+    'brunidura': {
+        'nome': 'Brunidura',
+        'ca_base': 14,
+        'tipo': 'armaduras',
+    },
+
+    'meia_armadura': {
+        'nome': 'Meia-Armadura',
+        'ca_base': 15,
         'tipo': 'armaduras',
     },
 
