@@ -28,13 +28,25 @@
 # conferir(INIMIGOS, 'Inimigo')
 # print('Conferencia terminada.')
 
-from data.modifiers import calcular_proficiencia
+# from data.modifiers import calcular_proficiencia
 
 
-def vida_inicial(dado_vida, constituicao):
-    proficiencia = calcular_proficiencia(constituicao)
-    vida = dado_vida + proficiencia
-    return vida
-print(vida_inicial(10, 14))   # 12
-print(vida_inicial(6, 13))    # 7
-print(vida_inicial(8, 14)) 
+# def vida_inicial(dado_vida, constituicao):
+#     proficiencia = calcular_proficiencia(constituicao)
+#     vida = dado_vida + proficiencia
+#     return vida
+# print(vida_inicial(10, 14))   # 12
+# print(vida_inicial(6, 13))    # 7
+# print(vida_inicial(8, 14)) 
+
+from core.characters import criar_personagem
+from data.classes import CLASSES
+
+personagem = criar_personagem('Anthony', CLASSES['mago'])
+
+print(personagem)
+
+personagem['inventario']['pocao_maior'] -= 1
+
+print(personagem['inventario'])
+print(CLASSES['mago']['inventario'])

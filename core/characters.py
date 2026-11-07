@@ -22,10 +22,22 @@ Parte de uma CA base (sem nada equipado; você define o valor).
 Soma: bônus da armadura se houver + modificador de destreza (usando a função do modifiers) + bônus do escudo se houver.
 Cada “se houver” é uma verificação de None.
 Receber o dicionário de itens como parâmetro, em vez de importá-lo, mantém o motor independente do conteúdo. '''
-from core.modifiers import calcular_proficiencia
-
+from data.modifiers import calcular_proficiencia
+from copy import deepcopy
 
 def vida_inicial(dado_vida, constituicao):
     proficiencia = calcular_proficiencia(constituicao)
     vida = dado_vida + proficiencia
     return vida
+
+def criar_personagem(nome_personagem, dados_classe):
+    personagem = deepcopy(dados_classe)
+    personagem['nome_personagem'] = nome_personagem
+    vida_maxima = vida_inicial(
+        dados_classe['dado_vida'], dados_classe['atributos']['constituicao']
+        )
+    personagem['vida_max'] = vida_maxima
+    personagem['vida_atual'] = vida_maxima
+    return personagem
+
+#IMPLEMENTAR CALCULO DE CA DENTRO DO CRIAR PERSONAGEM
