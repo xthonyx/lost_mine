@@ -14,13 +14,6 @@ Tabela dos modificadores ((valor do atributo - 10) / 2)) arredondado para baixo.
 CA = CA da armadura + modificador de destreza 
 
 
-
-
-
-
-
-
-
 '''
 
 '''3. A função da CA (core/characters.py)
@@ -29,3 +22,10 @@ Parte de uma CA base (sem nada equipado; você define o valor).
 Soma: bônus da armadura se houver + modificador de destreza (usando a função do modifiers) + bônus do escudo se houver.
 Cada “se houver” é uma verificação de None.
 Receber o dicionário de itens como parâmetro, em vez de importá-lo, mantém o motor independente do conteúdo. '''
+from core.modifiers import calcular_proficiencia
+
+
+def vida_inicial(dado_vida, constituicao):
+    proficiencia = calcular_proficiencia(constituicao)
+    vida = dado_vida + proficiencia
+    return vida
